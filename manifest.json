@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Tweet Trader",
+    "version": "1.0",
+    "description": "Invest in tweets and earn based on their performance!",
+    "permissions": ["activeTab", "storage", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://twitter.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
